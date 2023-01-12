@@ -13,5 +13,5 @@ jobs:
   call-workflow-A:
     uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
     with:
-      workflows-ref: main
+      workflows-ref: ${{ inputs.workflows-ref }}
       GH_ACCESSTOKEN: ${{ secrets.GH_ACCESSTOKEN }}
