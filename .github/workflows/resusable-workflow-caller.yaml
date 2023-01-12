@@ -14,6 +14,4 @@ jobs:
     uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
     with:
       workflows-ref: main
-    secrets:
-      # can't use GITHUB_TOKEN as its different repo
       GH_ACCESSTOKEN: ${{ secrets.GH_ACCESSTOKEN }}
