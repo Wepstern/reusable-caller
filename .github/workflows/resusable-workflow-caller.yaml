@@ -13,13 +13,7 @@ jobs:
   call-workflow-A:
     uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
     with:
-      username: Test-1
+      workflows-ref: main
     secrets:
-      token: ${{ secrets.TOKEN }}
-
-  call-workflow-B:
-    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
-    with:
-      username: Test-2
-    secrets:
-      token: ${{ secrets.TOKEN }}
+      # can't use GITHUB_TOKEN as its different repo
+      GH_ACCESSTOKEN: ${{ secrets.GH_ACCESSTOKEN }}
