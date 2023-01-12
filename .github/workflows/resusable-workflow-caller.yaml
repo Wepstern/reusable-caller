@@ -1,0 +1,25 @@
+name: resusable-workflow-caller
+
+on:
+  push:
+    branches: none # [ main ]
+  pull_request:
+    branches: none # [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  call-workflow-A:
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yml@main
+    with:
+      username: Test-1
+    secrets:
+      token: ${{ secrets.TOKEN }}
+
+  call-workflow-B:
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yml@main
+    with:
+      username: Test-2
+    secrets:
+      token: ${{ secrets.TOKEN }}
