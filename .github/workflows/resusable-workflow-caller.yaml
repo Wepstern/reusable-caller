@@ -11,14 +11,14 @@ on:
 
 jobs:
   call-workflow-A:
-    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yml@main
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
     with:
       username: Test-1
     secrets:
       token: ${{ secrets.TOKEN }}
 
   call-workflow-B:
-    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yml@main
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
     with:
       username: Test-2
     secrets:
