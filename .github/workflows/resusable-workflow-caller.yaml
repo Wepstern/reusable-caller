@@ -10,7 +10,35 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-reusable-workflow:
+  call-reusable-workflow-1:
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
+    with:
+      workflows-ref: main
+    # secrets:
+    #   GH_ACCESSTOKEN: ${{ secrets.GH_ACCESSTOKEN }}
+
+  call-reusable-workflow-2:
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
+    with:
+      workflows-ref: main
+    # secrets:
+    #   GH_ACCESSTOKEN: ${{ secrets.GH_ACCESSTOKEN }}
+
+  call-reusable-workflow-3:
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
+    with:
+      workflows-ref: main
+    # secrets:
+    #   GH_ACCESSTOKEN: ${{ secrets.GH_ACCESSTOKEN }}
+    
+  call-reusable-workflow-4:
+    uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
+    with:
+      workflows-ref: main
+    # secrets:
+    #   GH_ACCESSTOKEN: ${{ secrets.GH_ACCESSTOKEN }}
+
+  call-reusable-workflow-5:
     uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
     with:
       workflows-ref: main
