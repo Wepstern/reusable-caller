@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+concurrency:
+  group: reusable-caller
+  cancel-in-progress: true
+
 jobs:
   call-reusable-workflow-1:
     uses: Wepstern/reusable-called/.github/workflows/reusable-workflow-called.yaml@main
